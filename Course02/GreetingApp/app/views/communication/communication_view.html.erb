@@ -1,30 +1,29 @@
-<% textSizeElementTask = "h4" %>
-<% textSizeElementAnswer = "h5" %>
+<%= "<br/>課題 HelloWorldを表示 ※変数greetingを使用<br/>".html_safe %>
+<%= "#{GreetingMethod()}".html_safe %>
 
-<%= "<#{textSizeElementTask}>課題 HelloWorldを表示 ※変数greetingを使用</#{textSizeElementTask}>".html_safe %>
-<%= "<#{textSizeElementAnswer}>#{GreetingMethod()}</#{textSizeElementAnswer}>".html_safe %>
+<br/>
+<%= "<br/>課題 1～10まで足した値を表示<br/>".html_safe %>
+<%= "#{GetTotalNum(1, 10)}".html_safe %>
 
-<%= "<#{textSizeElementTask}>課題 1～10まで足した値を表示</#{textSizeElementTask}>".html_safe %>
-<%= "<#{textSizeElementAnswer}>#{GetTotalNum(1, 10)}</#{textSizeElementAnswer}>".html_safe %>
+<br/>
+<%= "<br/>課題 引数が0なら偽、引数が1なら真を表示<br/>".html_safe %>
+<%= "0の場合:#{GetDisplayValueForBool(0)}".html_safe %>
+<%= "1の場合:#{GetDisplayValueForBool(1)}".html_safe %>
+<%= "2の場合:#{GetDisplayValueForBool(2)}".html_safe %>
 
-<%= "<#{textSizeElementTask}>課題 引数が0なら偽、引数が1なら真を表示</#{textSizeElementTask}>".html_safe %>
-<%= "<#{textSizeElementAnswer}>0の場合:#{GetDisplayValueForBool(0)}</#{textSizeElementAnswer}>".html_safe %>
-<%= "<#{textSizeElementAnswer}>1の場合:#{GetDisplayValueForBool(1)}</#{textSizeElementAnswer}>".html_safe %>
-<%= "<#{textSizeElementAnswer}>2の場合:#{GetDisplayValueForBool(2)}</#{textSizeElementAnswer}>".html_safe %>
-
-<%= "<#{textSizeElementTask}>課題 配列の中身を表示</#{textSizeElementTask}>".html_safe %>
-<%= "<#{textSizeElementAnswer}>".html_safe %>
+<br/>
+<%= "<br/>課題 配列の中身を表示<br/>".html_safe %>
 <% for value in GetArraySample() %>
 <%= "#{value}".html_safe %>
 <% end %>
-<%= "</#{textSizeElementAnswer}>".html_safe %>
 
-<%= "<#{textSizeElementTask}>課題 greetメソッド内でHelloという言葉を受けたらHelloと返す ※職場以外では挨拶しない(酷い)</#{textSizeElementTask}>".html_safe %>
+<br/>
+<%= "<br/>課題 greetメソッド内でHelloという言葉を受けたらHelloと返す ※職場以外では挨拶しない(酷い)<br/>".html_safe %>
 <% returnGreeting = ReturnGreetingNormal("Hello") %>
-<%= "<#{textSizeElementAnswer}>職場以外：Helloの場合:#{returnGreeting}</#{textSizeElementAnswer}>".html_safe %>
+<%= "職場以外：Helloの場合:#{returnGreeting}<br/>".html_safe %>
 <% returnGreeting = ReturnGreetingNormal("GoodMorning") %>
-<%= "<#{textSizeElementAnswer}>職場以外：GoodMorningの場合:#{returnGreeting}</#{textSizeElementAnswer}>".html_safe %>
+<%= "職場以外：GoodMorningの場合:#{returnGreeting}<br/>".html_safe %>
 <% returnGreeting = ReturnGreetingWorkPlace("Hello") %>
-<%= "<#{textSizeElementAnswer}>職場：Helloの場合:#{returnGreeting}</#{textSizeElementAnswer}>".html_safe %>
+<%= "職場：Helloの場合:#{returnGreeting}<br/>".html_safe %>
 <% returnGreeting = ReturnGreetingWorkPlace("GoodMorning") %>
-<%= "<#{textSizeElementAnswer}>職場：GoodMorningの場合:#{returnGreeting}</#{textSizeElementAnswer}>".html_safe %>
+<%= "職場：GoodMorningの場合:#{returnGreeting}<br/>".html_safe %>
