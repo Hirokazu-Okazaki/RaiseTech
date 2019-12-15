@@ -21,9 +21,9 @@ module CommunicationHelper
             elsif value == 0
                 displayValue = "偽"
             else
-                raise Exception("入力値エラー")
+                raise StandardError.new("入力値エラー")
             end
-        rescue Exception => e
+        rescue => e
             displayValue = e.message
         end
         return displayValue
@@ -58,6 +58,7 @@ module CommunicationHelper
         def greet(greeting)
             returnGreeting = "無言"
             if IsWorkPlace()
+                # 職場でもHello以外挨拶を返さない(酷い)
                 if greeting == "Hello"
                     returnGreeting = "Hello"
                 end
