@@ -1,29 +1,29 @@
-<%= "<br/>課題 HelloWorldを表示 ※変数greetingを使用<br/>".html_safe %>
+<%= "<br/>◆課題 HelloWorldを表示 ※変数greetingを使用<br/>".html_safe %>
 <%= "#{GreetingMethod()}".html_safe %>
 
 <br/>
-<%= "<br/>課題 1～10まで足した値を表示<br/>".html_safe %>
+<%= "<br/>◆課題 1～10まで足した値を表示<br/>".html_safe %>
 <%= "#{GetTotalNum(1, 10)}".html_safe %>
 
 <br/>
-<%= "<br/>課題 引数が0なら偽、引数が1なら真を表示<br/>".html_safe %>
+<%= "<br/>◆課題 引数が0なら偽、引数が1なら真を表示<br/>".html_safe %>
 <%= "0の場合:#{GetDisplayValueForBool(0)}".html_safe %>
 <%= "1の場合:#{GetDisplayValueForBool(1)}".html_safe %>
 <%= "2の場合:#{GetDisplayValueForBool(2)}".html_safe %>
 
 <br/>
-<%= "<br/>課題 配列の中身を表示<br/>".html_safe %>
+<%= "<br/>◆課題 配列の中身を表示<br/>".html_safe %>
 <% for value in GetArraySample() %>
 <%= "#{value}".html_safe %>
 <% end %>
 
 <br/>
-<%= "<br/>課題 greetメソッド内でHelloという言葉を受けたらHelloと返す ※職場以外では挨拶しない(酷い)<br/>".html_safe %>
+<%= "<br/>◆課題 greetメソッド内でHelloという言葉を受けたらHelloと返す ※職場でのHello以外は挨拶を返さない(酷い)<br/>".html_safe %>
+<% returnGreetingWorkPlace = ReturnGreetingWorkPlace("Hello") %>
+<%= "職場(WorkPlaceCommunication)：Hello=>#{returnGreetingWorkPlace}<br/>".html_safe %>
+<% returnGreetingWorkPlace = ReturnGreetingWorkPlace("GoodMorning") %>
+<%= "職場(WorkPlaceCommunication)：GoodMorning=>#{returnGreetingWorkPlace}<br/>".html_safe %>
 <% returnGreeting = ReturnGreetingNormal("Hello") %>
-<%= "職場以外：Helloの場合:#{returnGreeting}<br/>".html_safe %>
+<%= "職場以外(Communication)：Hello=>#{returnGreeting}<br/>".html_safe %>
 <% returnGreeting = ReturnGreetingNormal("GoodMorning") %>
-<%= "職場以外：GoodMorningの場合:#{returnGreeting}<br/>".html_safe %>
-<% returnGreeting = ReturnGreetingWorkPlace("Hello") %>
-<%= "職場：Helloの場合:#{returnGreeting}<br/>".html_safe %>
-<% returnGreeting = ReturnGreetingWorkPlace("GoodMorning") %>
-<%= "職場：GoodMorningの場合:#{returnGreeting}<br/>".html_safe %>
+<%= "職場以外(Communication)：GoodMorning=>#{returnGreeting}<br/>".html_safe %>
